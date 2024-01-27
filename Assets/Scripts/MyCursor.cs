@@ -15,6 +15,6 @@ public class MyCursor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        myCursor.transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        myCursor.transform.position = new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x + 0.3f, Camera.main.ScreenToWorldPoint(Input.mousePosition).y - 0.5f, 0);
     }
 }
