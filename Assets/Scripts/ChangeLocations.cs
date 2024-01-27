@@ -6,7 +6,8 @@ public class ChangeLocations : MonoBehaviour
 {
     // define all the locations that
     Vector3 outside = new Vector3(0, 0, -10), petShop = new Vector3(25, 0, -10), stiltsStore = new Vector3(50, 0, -10),
-        amusementPark = new Vector3(0, -15, -10), stage = new Vector3(25, -15, -10), judges = new Vector3(75, -15, -10);
+        amusementPark = new Vector3(0, -15, -10), stage = new Vector3(25, -15, -10), judges = new Vector3(75, -15, -10),
+        poster = new Vector3(0, -30, -10);
 
     public void Switch(string loc)
     {
@@ -31,6 +32,9 @@ public class ChangeLocations : MonoBehaviour
                 break;
             case "judges":
                 cam.position = judges;
+                break;
+            case "poster":
+                cam.position = poster;
                 break;
         }
     }
