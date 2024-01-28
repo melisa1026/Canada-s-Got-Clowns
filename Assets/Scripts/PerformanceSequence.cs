@@ -14,6 +14,8 @@ public class PerformanceSequence : MonoBehaviour
     public int jokePoints = 0, talentPoints = 0;
     public GameObject confetti;
     public GameObject placard1, placard2, placard3, score1, score2, score3;
+    public AudioSource audio;
+    public AudioClip joke1, joke2, joke3, chosenJoke;
 
     void Start()
     {
@@ -30,8 +32,7 @@ public class PerformanceSequence : MonoBehaviour
         yield return new WaitForSeconds(3);
         textbox.SetActive(false);
         Vector3 newClownPos = new Vector3(clown.transform.position.x, clown.transform.position.y - 0.5f, clown.transform.position.z);
-        Vector3 newClownScale = new Vector3(clown.transform.localScale.x*1.1f, clown.transform.localScale.y*1.1f, 1);
-        clown.transform.DOMove(newClownPos, 1);
+        Vector3 newClownScale = new Vector3(clown.transform.localScale.x*1.25f, clown.transform.localScale.y*1.25f, 1);
         clown.transform.DOScale(newClownScale, 1);
         yield return new WaitForSeconds(2);
 
@@ -60,27 +61,32 @@ public class PerformanceSequence : MonoBehaviour
             joke = "What does a baby computer call his father?";
             punchline = "DATA";
             jokePoints = 8;
+            chosenJoke = joke1;
         }
         else if(jokeNumber == 2)
         {
             joke = "How do you make a tissue dance?";
             punchline = "You put a little boogie in it.";
             jokePoints = 5;
+            chosenJoke = joke2;
         }
         else
         {
-            joke = "Which city is ruled by all clowns?";
+            joke = "What's a clown's favourite city?";
             punchline = "Honk Konk";
             jokePoints = 10;
+            chosenJoke = joke3;
         }
 
         // tell the joke
         jokeText.SetActive(true);
         jokeTextBg.SetActive(true);
+        audio.clip = chosenJoke;
+        audio.Play();
         jokeText.GetComponent<TMPro.TextMeshProUGUI>().text = joke;
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(3f);
         jokeText.GetComponent<TMPro.TextMeshProUGUI>().text = punchline;
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(3f);
         jokeText.SetActive(false);
         jokeTextBg.SetActive(false);
 
