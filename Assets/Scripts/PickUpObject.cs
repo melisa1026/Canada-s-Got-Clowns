@@ -11,7 +11,7 @@ public class PickUpObject : MonoBehaviour
     
     private int used;
     private static int score = 0;
-    GameObject displayScore;
+    public GameObject displayScore;
 
     void Start()
     {
@@ -21,7 +21,7 @@ public class PickUpObject : MonoBehaviour
     public void OnButtonPress()
     {
         if (number == 1 && used == 0)
-        { 
+        {
             Collected.hair = true;
             score++;
             used = 1;

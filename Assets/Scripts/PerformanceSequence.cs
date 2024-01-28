@@ -15,7 +15,7 @@ public class PerformanceSequence : MonoBehaviour
     public GameObject confetti;
     public GameObject placard1, placard2, placard3, score1, score2, score3;
     public AudioSource audio;
-    public AudioClip joke1, joke2, joke3, chosenJoke;
+    public AudioClip joke1, joke2, joke3, chosenJoke, cheering;
 
     void Start()
     {
@@ -132,6 +132,8 @@ public class PerformanceSequence : MonoBehaviour
         clown.GetComponent<Animator>().enabled = true;
         yield return new WaitForSeconds(2);
         confetti.GetComponent<Animator>().enabled = true;
+        audio.clip = cheering;
+        audio.Play();
         yield return new WaitForSeconds(2);
 
         // go to judges
