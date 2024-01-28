@@ -78,7 +78,7 @@ public class PickUpObject : MonoBehaviour
 
     void Update()
     {
-        displayScore.GetComponent<TMPro.TextMeshProUGUI>().text = score.ToString();
+        displayScore.GetComponent<TMPro.TextMeshProUGUI>().text = score.ToString() + "/9";
     }
 
 }
