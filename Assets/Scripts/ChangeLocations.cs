@@ -27,12 +27,6 @@ public class ChangeLocations : MonoBehaviour
             case "amusement park":
                 cam.position = amusementPark;
                 break;
-            case "stage":
-                cam.position = stage;
-                break;
-            case "judges":
-                cam.position = judges;
-                break;
             case "poster":
                 cam.position = poster;
                 break;
