@@ -8,4 +8,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Lose.unity
+    guid: ecf6c05cff0599641a2706effd7adca5
+  - enabled: 1
+    path: Assets/Scenes/Performance.unity
+    guid: fb2737cd47efb9d40aa04959cb32af4b
+  - enabled: 1
+    path: Assets/Scenes/Reveal.unity
+    guid: 8be36ff2bac26434bb422b8ce9b38df3
   m_configObjects: {}
