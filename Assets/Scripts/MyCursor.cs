@@ -22,7 +22,7 @@ public class MyCursor : MonoBehaviour
 
     public void bigCursor()
     {
-        myCursor.transform.localScale = new Vector3(myCursor.transform.localScale.x * 1.5f, myCursor.transform.localScale.y * 1.5f, myCursor.transform.localScale.z);
+        myCursor.transform.localScale = new Vector3(originalScale.x * 1.5f, originalScale.y * 1.5f, myCursor.transform.localScale.z);
     }
 
     public void normalCursor()
