@@ -11,7 +11,7 @@ public class PickUpObject : MonoBehaviour
     
     private int used;
     private static int score = 0;
-    public GameObject displayScore;
+    GameObject displayScore;
 
     void Start()
     {
@@ -78,7 +78,8 @@ public class PickUpObject : MonoBehaviour
 
     void Update()
     {
-        displayScore.GetComponent<TMPro.TextMeshProUGUI>().text = score.ToString() + "/9";
+        if(displayScore != null)
+            displayScore.GetComponent<TMPro.TextMeshProUGUI>().text = score.ToString() + "/9";
     }
 
 }

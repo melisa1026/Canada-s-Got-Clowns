@@ -17,14 +17,6 @@ public class StartPage : MonoBehaviour
 
     public void OnButtonPress()
     {
-        StartCoroutine(startPage());
-    }
-
-    IEnumerator startPage()
-    {
-        startScreen.SetActive(false);
-        story.SetActive(true);
-        yield return new WaitForSeconds(5);
         SceneManager.LoadScene("MainScene");
     }
 }
