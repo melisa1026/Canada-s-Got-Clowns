@@ -16,19 +16,19 @@ public class OutfitChange : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Collected.hair == true && Collected.clothes == false)
+        if (Collected.hair == true && Collected.stilts == false)
         {
             clown.GetComponent<SpriteRenderer>().sprite = hair; 
         }
-        else if (Collected.hair == true && Collected.clothes == true)
+        else if (Collected.hair == true && Collected.stilts == true)
         {
             clown.GetComponent<SpriteRenderer>().sprite = hairAndClothes;
         }
-        else if (Collected.hair == false && Collected.clothes == true)
+        else if (Collected.hair == false && Collected.stilts == true)
         {
             clown.GetComponent<SpriteRenderer>().sprite = clothes;
         }
-        else if (Collected.hair == false && Collected.clothes == false)
+        else if (Collected.hair == false && Collected.stilts == false)
         {
             clown.GetComponent<SpriteRenderer>().sprite = nothing;
         }
