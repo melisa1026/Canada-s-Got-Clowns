@@ -9,12 +9,14 @@ public class scriptSquished : MonoBehaviour
     // Start is called before the first frame update
     public void Start()
     {
-        button.SetActive(false); 
+        button.GetComponent<Renderer>().enabled = false;
+        Debug.Log("Button Squished: hide");
     }
 
     // Update is called once per frame
-    public void ButtonSquishedHover()
+    public void SquishedHover()
     {
+        Debug.Log("Button Squished: hover start");
         StartCoroutine(waiter());
     }
 
@@ -22,11 +24,13 @@ public class scriptSquished : MonoBehaviour
     {
         yield return new WaitForSeconds(1);
 
-        button.SetActive(true);
+        button.GetComponent<Renderer>().enabled = true;
+        Debug.Log("Button Squished: appears");
     }
 
-    public void ButtoneSquishedNotHover()
+    public void SquishedNotHover()
     {
-        button.SetActive(false);
+        button.GetComponent<Renderer>().enabled = false;
+        Debug.Log("Button Squished: disappears");
     }
 }

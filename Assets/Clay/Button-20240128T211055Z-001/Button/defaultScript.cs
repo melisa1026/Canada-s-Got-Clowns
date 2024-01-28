@@ -7,14 +7,15 @@ public class defaultScript : MonoBehaviour
     public GameObject hover;
 
     // Update is called once per frame
-    public void ButtonDefaultHover()
+    public void DefaultHover()
     {
-        hover.SetActive(false);
+        hover.GetComponent<Renderer>().enabled = false;
         Debug.Log("hide");
     }
 
-    public void ButtoneDefaultNotHover()
+    public void DefaultNotHover()
     {
-        hover.SetActive(true);
+        hover.GetComponent<Renderer>().enabled = true;
+        Debug.Log("Reappears");
     }
 }
