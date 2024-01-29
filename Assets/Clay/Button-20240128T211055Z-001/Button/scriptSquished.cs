@@ -17,15 +17,7 @@ public class scriptSquished : MonoBehaviour
     public void SquishedHover()
     {
         Debug.Log("Button Squished: hover start");
-        StartCoroutine(waiter());
-    }
-
-    public IEnumerator waiter()
-    {
-        yield return new WaitForSeconds(1);
-
         button.GetComponent<Renderer>().enabled = true;
-        Debug.Log("Button Squished: appears");
     }
 
     public void SquishedNotHover()

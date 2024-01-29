@@ -18,7 +18,7 @@ public class script : MonoBehaviour
         buttonbtwn.GetComponent<Renderer>().enabled = true;
         Debug.Log("Button Middle: appears");
 
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.5f);
 
         buttonbtwn.GetComponent<Renderer>().enabled = false;
         Debug.Log("Button Middle: disappears");
