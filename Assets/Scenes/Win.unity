@@ -207,7 +207,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1270654691}
         m_TargetAssemblyTypeName: ChangeScenes, Assembly-CSharp
         m_MethodName: ChangeScene
         m_Mode: 5
@@ -553,6 +553,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1270654689}
+  - component: {fileID: 1270654691}
   - component: {fileID: 1270654690}
   - component: {fileID: 1270654688}
   - component: {fileID: 1270654687}
@@ -643,6 +644,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myCursor: {fileID: 916364512}
   originalScale: {x: 0, y: 0, z: 0}
+--- !u!114 &1270654691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1270654686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 344a855b6e69ceb458c71931dc3c19fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1601850046
 GameObject:
   m_ObjectHideFlags: 0
