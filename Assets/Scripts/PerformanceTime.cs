@@ -11,6 +11,12 @@ public class PerformanceTime : MonoBehaviour
         if (Collected.hair == true && Collected.clothes == true && Collected.shoes == true && Collected.joke1 == true
             && Collected.joke2 == true && Collected.joke3 == true && Collected.stilts == true
             && Collected.juggling == true && Collected.balloonAnimals == true)
-            SceneManager.LoadScene("Performance");
+     StartCoroutine(seconds());
+    }
+
+    IEnumerator seconds()
+    {
+        yield return new WaitForSeconds(4f);
+        SceneManager.LoadScene("Performance");
     }
 }
