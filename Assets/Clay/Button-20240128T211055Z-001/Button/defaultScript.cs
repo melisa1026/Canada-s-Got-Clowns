@@ -15,7 +15,7 @@ public class defaultScript : MonoBehaviour
 
     public void DefaultNotHover()
     {
-        hover.GetComponent<Renderer>().enabled = true;
         Debug.Log("Reappears");
+        hover.GetComponent<Renderer>().enabled = true;
     }
 }
